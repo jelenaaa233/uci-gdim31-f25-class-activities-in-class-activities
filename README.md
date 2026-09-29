@@ -1,7 +1,9 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Write your W1 activity Devlog here.
+Move the cat from the start platform（red） to end platform（green） . After，we did the web build.
+
+https://jelenaaa233.itch.io/kitty
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
