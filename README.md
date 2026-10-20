@@ -34,6 +34,7 @@ Activity 3:
 I believe the balls become so bright due to the 1.5 scaling of their color values when they bounce at a certain speed. As the balls bounce enough times, the RGB values continue to increase and the balls become brighter until they become nearly white. The reason for this is that the color value is scaled per bounce rather than being reset per bounce.
 
 ### W4 
+table 16
 I learned about the roles of Colliders, Rigidbodies, and the "Is Trigger" setting in Unity.
 First, I assigned different Colliders to the Cat, the SoccerBall, and the Goal. Then, I used a MadeGoal() method to handle goal events.
 I also implemented a scoring system—adding one point for every goal—and included a timer to track the time elapsed since the last goal.
