@@ -7,6 +7,8 @@ public class SoccerBall : MonoBehaviour
     [SerializeField] private TMP_Text _pointsText;
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private ParticleSystem _goalVFX;
+    private int _points = 0;
+    private float _timeSinceLastGoal = 0f;
 
     // STEP 1 -----------------------------------------------------------------
     // The OnTriggerEnter method is a collision method called by Unity that
@@ -33,7 +35,13 @@ public class SoccerBall : MonoBehaviour
         //
         // Then, move your Debug.Log() statement so that it's only called if
         //      the colliding object has the "Goal" tag.
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Goal"))
+        {
+            MadeGoal();
+        }
+    }
 
         // STEP 2 -------------------------------------------------------------
     //}
@@ -58,8 +66,16 @@ public class SoccerBall : MonoBehaviour
         // Call Play on _goalVFX.
 
         // STEP 4 -------------------------------------------------------------
-    
-    
+    private void MadeGoal()
+    {
+        Debug.Log("SoccerBall detected a collision with a trigger collider!");
+
+        _goalVFX.Play();
+        _points++;
+        _pointsText.text = "points: " + _points;
+        _timeSinceLastGoal = 0f;
+
+    }
     // STEP 3 -----------------------------------------------------------------
 
 
@@ -95,4 +111,9 @@ public class SoccerBall : MonoBehaviour
     //      2. Use the MadeGoal method to reset your
     //              time variable when the player makes a goal. 
     // STEP 6 -----------------------------------------------------------------
+    private void Update()
+    {
+        _timeSinceLastGoal += Time.deltaTime;
+        _timeText.text = "time since last goal: " + _timeSinceLastGoal.ToString("F0");
+    }
 }
