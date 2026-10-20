@@ -17,7 +17,7 @@ The error told me that the calculation produced a double, but the variable requi
 table number: 16
 Activity 1:
 1. GetResponse
-- Parameters: `float friendshipLevel`, `bool knowsSecret`
+- Parameters: `float friendshipLevel`, `bool knowsSecret
 - Return type: `string`
 The method uses the friendship level and whether the player knows the character's secret to decide what the character will say.
 2. SetLightDimness
@@ -28,12 +28,17 @@ The method changes the brightness of the lights based on the player's sanity lev
 - Parameter: `float keyPressTime`
 - Return type: `bool`
 The method checks whether the player pressed the key at the correct time and returns true or false.
-
 Activity 2:
 I think a class is like a person, and a component is like a job that the person takes. The class is the template that defines what the person can do. Member variables are the person's traits, such as their speed, strength, or health. Methods are the person's abilities or actions, such as walking, jumping, or talking. Different components can give a GameObject different functions, just like people can have different jobs and responsibilities.
-
 Activity 3:
 I believe the balls become so bright due to the 1.5 scaling of their color values when they bounce at a certain speed. As the balls bounce enough times, the RGB values continue to increase and the balls become brighter until they become nearly white. The reason for this is that the color value is scaled per bounce rather than being reset per bounce.
+
+### W4 
+I learned about the roles of Colliders, Rigidbodies, and the "Is Trigger" setting in Unity.
+First, I assigned different Colliders to the Cat, the SoccerBall, and the Goal. Then, I used a MadeGoal() method to handle goal events.
+I also implemented a scoring system—adding one point for every goal—and included a timer to track the time elapsed since the last goal.
+
+I ran into some issues—indicated by exclamation mark icons—because parts of my code were placed outside the method's curly braces. By checking the placement of these braces and the variable declarations, I was able to resolve the compilation errors. This process has deepened my understanding of collision detection, method invocation, and UI updates in Unity.
 
 ## Open-Source Assets
 ### W1
