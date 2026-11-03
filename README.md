@@ -41,6 +41,12 @@ I also implemented a scoring system—adding one point for every goal—and incl
 
 I ran into some issues—indicated by exclamation mark icons—because parts of my code were placed outside the method's curly braces. By checking the placement of these braces and the variable declarations, I was able to resolve the compilation errors. This process has deepened my understanding of collision detection, method invocation, and UI updates in Unity.
 
+### W5
+table 16
+1.The class needs two member variables: one Transform variable for the target and one NavMeshAgent variable for the deer's movement. 2.Start() 
+3.The Start() method gets the NavMeshAgent component using GetComponent() and uses SetDestination() to make the deer move toward the target.
+4.My partner and I discussed how to implement the DeerW5 class, and we each wrote and tested our own code.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
