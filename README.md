@@ -47,6 +47,17 @@ table 16 Lexie
 3.The Start() method gets the NavMeshAgent component using GetComponent() and uses SetDestination() to make the deer move toward the target.
 4.My partner and I discussed how to implement the DeerW5 class, and we each wrote and tested our own code.
 
+### W7
+table 16
+Activity 1: Class Resource Guide
+My assigned category: General C# Coding and Unity Engine
+Google Doc: https://docs.google.com/document/d/1W83E18EwXXSdkScO6OmRU6EeHu7ACjFLijvjSUNB8QA/edit?usp=sharing
+Activity 2:
+Partner: Lexie
+1.Speed, the Cat's position and a bool to check if the bat is chasing 
+2. Start() and Update() from Unity, and two methods I write myself: StartChasing() and StopChasing(). 
+3. Start() makes the bat chase the Cat for testing. Update() moves the bat toward the Cat and StartChasing() makes the bat start chasing. StopChasing() makes it stop.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
