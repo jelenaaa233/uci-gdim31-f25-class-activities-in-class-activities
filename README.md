@@ -43,8 +43,13 @@ I ran into some issues—indicated by exclamation mark icons—because parts of 
 
 ### W5
 table 16 Lexie
-1.The class needs two member variables: one Transform variable for the target and one NavMeshAgent variable for the deer's movement. 2.Start() 
+
+1.The class needs two member variables: one Transform variable for the target and one NavMeshAgent variable for the deer's movement. 
+
+2.Start() 
+
 3.The Start() method gets the NavMeshAgent component using GetComponent() and uses SetDestination() to make the deer move toward the target.
+
 4.My partner and I discussed how to implement the DeerW5 class, and we each wrote and tested our own code.
 
 ### W7
@@ -52,10 +57,13 @@ table 16
 Activity 1: Class Resource Guide
 My assigned category: General C# Coding and Unity Engine
 Google Doc: https://docs.google.com/document/d/1W83E18EwXXSdkScO6OmRU6EeHu7ACjFLijvjSUNB8QA/edit?usp=sharing
+
 Activity 2:
 Partner: Lexie
 1.Speed, the Cat's position and a bool to check if the bat is chasing 
-2. Start() and Update() from Unity, and two methods I write myself: StartChasing() and StopChasing(). 
+
+2. Start() and Update() from Unity, and two methods I write myself: StartChasing() and StopChasing().
+
 3. Start() makes the bat chase the Cat for testing. Update() moves the bat toward the Cat and StartChasing() makes the bat start chasing. StopChasing() makes it stop.
 
 ### W8
