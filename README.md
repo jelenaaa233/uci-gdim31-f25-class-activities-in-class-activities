@@ -58,6 +58,13 @@ Partner: Lexie
 2. Start() and Update() from Unity, and two methods I write myself: StartChasing() and StopChasing(). 
 3. Start() makes the bat chase the Cat for testing. Update() moves the bat toward the Cat and StartChasing() makes the bat start chasing. StopChasing() makes it stop.
 
+### W8
+table 16
+<img width="2560" height="1407" alt="0e29090e5728d222330b3e9389ff45c7" src="https://github.com/user-attachments/assets/1a00a50a-4e52-4736-bef9-26ff62f128e3" />
+
+
+The code used Vector3.forward, which moves the Muskrat in a fixed world direction instead of the direction it is facing. I changed it to transform.forward so the Muskrat moves forward and backward based on its rotation.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
