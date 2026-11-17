@@ -51,6 +51,13 @@ public class MuskratW7 : MonoBehaviour
 
         // STEP 3 -------------------------------------------------------------
 
+        Vector3 up = transform.TransformDirection(Vector3.up);
+        transform.RotateAround(
+            transform.position,
+            up,
+            leftright * _rotationSpeed * Time.deltaTime
+        );
+
         float forward = Input.GetAxis("Vertical");
         Vector3 axis = transform.TransformDirection(Vector3.right);
         transform.RotateAround(
@@ -68,6 +75,11 @@ public class MuskratW7 : MonoBehaviour
 
 
         // STEP 5 -------------------------------------------------------------
+
+        float movement = Input.GetAxis("Vertical");
+
+        _animator.SetBool("running", Mathf.Abs(movement) > 0.1f);
+        _animator.SetBool("flying", false);
     }
 
     // ------------------------------------------------------------------------
@@ -88,6 +100,7 @@ public class MuskratW7 : MonoBehaviour
         float leftright = Input.GetAxis("Horizontal");
 
         // STEP 1 -------------------------------------------------------------
+        transform.Rotate(Vector3.up * leftright * _rotationSpeed * Time.deltaTime);
 
 
         // STEP 2 -------------------------------------------------------------
@@ -96,9 +109,11 @@ public class MuskratW7 : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
 
         // STEP 2 -------------------------------------------------------------
+
+        transform.position += movement * transform.forward * _moveSpeed * Time.deltaTime;
+        
 
 
         // STEP 4 -------------------------------------------------------------
@@ -110,6 +125,11 @@ public class MuskratW7 : MonoBehaviour
 
         
         // STEP 4 -------------------------------------------------------------
+        bool flying = Mathf.Abs(_rigidbody.linearVelocity.y) > 0.1f;
+        bool running = Mathf.Abs(movement) > 0.1f && !flying;
+
+        _animator.SetBool("flying", flying);
+        _animator.SetBool("running", running);
     }
 
     // ------------------------------------------------------------------------
