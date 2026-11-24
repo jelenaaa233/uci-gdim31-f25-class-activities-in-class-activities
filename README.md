@@ -73,6 +73,14 @@ table 16
 
 The code used Vector3.forward, which moves the Muskrat in a fixed world direction instead of the direction it is facing. I changed it to transform.forward so the Muskrat moves forward and backward based on its rotation.
 
+### W9
+table 13
+
+break-down: https://docs.google.com/document/d/1R4EA6nM4H4N9eVCOL5yd7b_DKLYYtCJnHjEnYstXoxs/edit?tab=t.0
+
+Today, I created animations for all the cats and modified the player code.
+
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
